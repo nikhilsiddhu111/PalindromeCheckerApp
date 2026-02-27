@@ -1,12 +1,8 @@
-class UC2Palindrome {
-
-    public static void main(String[] args) {
-
-
+public class Uc2 {
+    static void main() {
         String word = "madam";
 
         String reversed = new StringBuilder(word).reverse().toString();
-
 
         if (word.equals(reversed)) {
             System.out.println(word + " is a palindrome.");
