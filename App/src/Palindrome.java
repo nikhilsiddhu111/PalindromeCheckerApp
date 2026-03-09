@@ -1,17 +1,25 @@
-class UC2Palindrome {
+public class Palindrome {
+    public static void main (String[] args) {
 
-    public static void main(String[] args) {
+        String input = "radar";
 
+        char[] chars = input.toCharArray();
 
-        String word = "madam";
+        int start = 0;
+        int end = chars.length - 1;
 
-        String reversed = new StringBuilder(word).reverse().toString();
+        boolean isPalindrome = true;
 
-
-        if (word.equals(reversed)) {
-            System.out.println(word + " is a palindrome.");
-        } else {
-            System.out.println(word + " is not a palindrome.");
+        while (start < end) {
+            if (chars[start] != chars[end]) {
+                isPalindrome = false;
+                break;
+            }
+            start++;
+            end--;
         }
+        System.out.println("Input : " + input);
+        System.out.println("Is Palindrome? : " + isPalindrome);
     }
+
 }
